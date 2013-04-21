@@ -1,0 +1,77 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Apps", "Apps", "{F543B80A-7F0D-4809-BDF9-AC8E8C6AAB4B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YAPOS", "Apps\YAPOS\YAPOS.csproj", "{4FC38CE5-6B1B-418A-893A-1A1D54D08E7A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "External Libs", "External Libs", "{8F698DF5-13A8-47A6-B5C6-B3C5FEABA787}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Unity", "Unity", "{E4EFB548-3709-403C-950B-392D38AA22C7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Desktop", "Desktop", "{DE909A9B-CBE5-482C-9407-9704B83F8A5D}"
+	ProjectSection(SolutionItems) = preProject
+		External Libs\Unity\2.1.505.0\Desktop\Microsoft.Practices.Unity.Configuration.dll = External Libs\Unity\2.1.505.0\Desktop\Microsoft.Practices.Unity.Configuration.dll
+		External Libs\Unity\2.1.505.0\Desktop\Microsoft.Practices.Unity.Configuration.XML = External Libs\Unity\2.1.505.0\Desktop\Microsoft.Practices.Unity.Configuration.XML
+		External Libs\Unity\2.1.505.0\Desktop\Microsoft.Practices.Unity.dll = External Libs\Unity\2.1.505.0\Desktop\Microsoft.Practices.Unity.dll
+		External Libs\Unity\2.1.505.0\Desktop\Microsoft.Practices.Unity.Interception.Configuration.dll = External Libs\Unity\2.1.505.0\Desktop\Microsoft.Practices.Unity.Interception.Configuration.dll
+		External Libs\Unity\2.1.505.0\Desktop\Microsoft.Practices.Unity.Interception.Configuration.xml = External Libs\Unity\2.1.505.0\Desktop\Microsoft.Practices.Unity.Interception.Configuration.xml
+		External Libs\Unity\2.1.505.0\Desktop\Microsoft.Practices.Unity.Interception.dll = External Libs\Unity\2.1.505.0\Desktop\Microsoft.Practices.Unity.Interception.dll
+		External Libs\Unity\2.1.505.0\Desktop\Microsoft.Practices.Unity.Interception.xml = External Libs\Unity\2.1.505.0\Desktop\Microsoft.Practices.Unity.Interception.xml
+		External Libs\Unity\2.1.505.0\Desktop\Microsoft.Practices.Unity.xml = External Libs\Unity\2.1.505.0\Desktop\Microsoft.Practices.Unity.xml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2.1.505.0", "2.1.505.0", "{7BC6ED21-4161-40CB-A262-D2112171D8BE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Service Location", "Service Location", "{30CA8C73-AD2F-4227-8E10-B2E03EC54E86}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.0.0.0", "1.0.0.0", "{C705F95C-F901-4601-B2F6-078F6ED6985E}"
+	ProjectSection(SolutionItems) = preProject
+		External Libs\Service Location\1.0.0.0\Microsoft.Practices.ServiceLocation.dll = External Libs\Service Location\1.0.0.0\Microsoft.Practices.ServiceLocation.dll
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Prism", "Prism", "{E685ED0C-ADDA-4308-855B-8E66148B23B0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.1.0.0", "4.1.0.0", "{FF303130-0936-4D1C-B12F-1FB019DB0D98}"
+	ProjectSection(SolutionItems) = preProject
+		External Libs\Prism\4.1.0.0\Microsoft.Practices.Prism.dll = External Libs\Prism\4.1.0.0\Microsoft.Practices.Prism.dll
+		External Libs\Prism\4.1.0.0\Microsoft.Practices.Prism.Interactivity.dll = External Libs\Prism\4.1.0.0\Microsoft.Practices.Prism.Interactivity.dll
+		External Libs\Prism\4.1.0.0\Microsoft.Practices.Prism.Interactivity.pdb = External Libs\Prism\4.1.0.0\Microsoft.Practices.Prism.Interactivity.pdb
+		External Libs\Prism\4.1.0.0\Microsoft.Practices.Prism.Interactivity.XML = External Libs\Prism\4.1.0.0\Microsoft.Practices.Prism.Interactivity.XML
+		External Libs\Prism\4.1.0.0\Microsoft.Practices.Prism.MefExtensions.dll = External Libs\Prism\4.1.0.0\Microsoft.Practices.Prism.MefExtensions.dll
+		External Libs\Prism\4.1.0.0\Microsoft.Practices.Prism.MefExtensions.pdb = External Libs\Prism\4.1.0.0\Microsoft.Practices.Prism.MefExtensions.pdb
+		External Libs\Prism\4.1.0.0\Microsoft.Practices.Prism.MefExtensions.XML = External Libs\Prism\4.1.0.0\Microsoft.Practices.Prism.MefExtensions.XML
+		External Libs\Prism\4.1.0.0\Microsoft.Practices.Prism.pdb = External Libs\Prism\4.1.0.0\Microsoft.Practices.Prism.pdb
+		External Libs\Prism\4.1.0.0\Microsoft.Practices.Prism.UnityExtensions.dll = External Libs\Prism\4.1.0.0\Microsoft.Practices.Prism.UnityExtensions.dll
+		External Libs\Prism\4.1.0.0\Microsoft.Practices.Prism.UnityExtensions.pdb = External Libs\Prism\4.1.0.0\Microsoft.Practices.Prism.UnityExtensions.pdb
+		External Libs\Prism\4.1.0.0\Microsoft.Practices.Prism.UnityExtensions.xml = External Libs\Prism\4.1.0.0\Microsoft.Practices.Prism.UnityExtensions.xml
+		External Libs\Prism\4.1.0.0\Microsoft.Practices.Prism.XML = External Libs\Prism\4.1.0.0\Microsoft.Practices.Prism.XML
+		External Libs\Prism\4.1.0.0\Microsoft.Practices.ServiceLocation.XML = External Libs\Prism\4.1.0.0\Microsoft.Practices.ServiceLocation.XML
+		External Libs\Prism\4.1.0.0\Microsoft.Practices.Unity.xml = External Libs\Prism\4.1.0.0\Microsoft.Practices.Unity.xml
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4FC38CE5-6B1B-418A-893A-1A1D54D08E7A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4FC38CE5-6B1B-418A-893A-1A1D54D08E7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4FC38CE5-6B1B-418A-893A-1A1D54D08E7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4FC38CE5-6B1B-418A-893A-1A1D54D08E7A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{4FC38CE5-6B1B-418A-893A-1A1D54D08E7A} = {F543B80A-7F0D-4809-BDF9-AC8E8C6AAB4B}
+		{E4EFB548-3709-403C-950B-392D38AA22C7} = {8F698DF5-13A8-47A6-B5C6-B3C5FEABA787}
+		{30CA8C73-AD2F-4227-8E10-B2E03EC54E86} = {8F698DF5-13A8-47A6-B5C6-B3C5FEABA787}
+		{E685ED0C-ADDA-4308-855B-8E66148B23B0} = {8F698DF5-13A8-47A6-B5C6-B3C5FEABA787}
+		{7BC6ED21-4161-40CB-A262-D2112171D8BE} = {E4EFB548-3709-403C-950B-392D38AA22C7}
+		{DE909A9B-CBE5-482C-9407-9704B83F8A5D} = {7BC6ED21-4161-40CB-A262-D2112171D8BE}
+		{C705F95C-F901-4601-B2F6-078F6ED6985E} = {30CA8C73-AD2F-4227-8E10-B2E03EC54E86}
+		{FF303130-0936-4D1C-B12F-1FB019DB0D98} = {E685ED0C-ADDA-4308-855B-8E66148B23B0}
+	EndGlobalSection
+EndGlobal
