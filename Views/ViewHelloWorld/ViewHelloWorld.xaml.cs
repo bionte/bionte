@@ -13,14 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace YAPOS
+namespace Bionte.Views
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for ViewHelloWorld.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class ViewHelloWorld : UserControl
     {
-        public MainWindow()
+        public ViewHelloWorld()
         {
             InitializeComponent();
         }

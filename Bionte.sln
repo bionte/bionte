@@ -50,6 +50,14 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.1.0.0", "4.1.0.0", "{FF30
 		External Libs\Prism\4.1.0.0\Microsoft.Practices.Unity.xml = External Libs\Prism\4.1.0.0\Microsoft.Practices.Unity.xml
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Modules", "Modules", "{8461283C-B230-4481-9FDF-12FBAA6BCAC3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModuleHelloWorld", "Modules\ModuleHelloWorld\ModuleHelloWorld.csproj", "{E00D0765-249F-4990-A9CE-042204E76FE1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Views", "Views", "{DAFB1570-1410-442E-B9EB-E3AAD897A341}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ViewHelloWorld", "Views\ViewHelloWorld\ViewHelloWorld.csproj", "{758C00D7-390C-4625-967C-44B99EC587A3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -60,6 +68,14 @@ Global
 		{4FC38CE5-6B1B-418A-893A-1A1D54D08E7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4FC38CE5-6B1B-418A-893A-1A1D54D08E7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4FC38CE5-6B1B-418A-893A-1A1D54D08E7A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E00D0765-249F-4990-A9CE-042204E76FE1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E00D0765-249F-4990-A9CE-042204E76FE1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E00D0765-249F-4990-A9CE-042204E76FE1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E00D0765-249F-4990-A9CE-042204E76FE1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{758C00D7-390C-4625-967C-44B99EC587A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{758C00D7-390C-4625-967C-44B99EC587A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{758C00D7-390C-4625-967C-44B99EC587A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{758C00D7-390C-4625-967C-44B99EC587A3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -73,5 +89,7 @@ Global
 		{DE909A9B-CBE5-482C-9407-9704B83F8A5D} = {7BC6ED21-4161-40CB-A262-D2112171D8BE}
 		{C705F95C-F901-4601-B2F6-078F6ED6985E} = {30CA8C73-AD2F-4227-8E10-B2E03EC54E86}
 		{FF303130-0936-4D1C-B12F-1FB019DB0D98} = {E685ED0C-ADDA-4308-855B-8E66148B23B0}
+		{E00D0765-249F-4990-A9CE-042204E76FE1} = {8461283C-B230-4481-9FDF-12FBAA6BCAC3}
+		{758C00D7-390C-4625-967C-44B99EC587A3} = {DAFB1570-1410-442E-B9EB-E3AAD897A341}
 	EndGlobalSection
 EndGlobal

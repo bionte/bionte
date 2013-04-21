@@ -4,6 +4,8 @@ using Microsoft.Practices.Prism.Modularity;
 using Microsoft.Practices.Unity;
 using Microsoft.Practices.Prism.UnityExtensions;
 
+using Bionte.Modules;
+
 namespace YAPOS
 {
     class Bootstrapper : UnityBootstrapper
@@ -21,6 +23,13 @@ namespace YAPOS
             App.Current.MainWindow.Show();
         }
 
+        //protected override void ConfigureModuleCatalog()
+        //{
+        //    base.ConfigureModuleCatalog();
+
+        //    ModuleCatalog moduleCatalog = (ModuleCatalog)this.ModuleCatalog;
+        //    moduleCatalog.AddModule(typeof(Bionte.Modules.ModuelHelloWorld));
+        //}
 
         protected override IModuleCatalog CreateModuleCatalog()
         {
