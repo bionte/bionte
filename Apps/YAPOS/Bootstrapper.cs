@@ -1,8 +1,10 @@
 ﻿using System.Windows;
 
-using Microsoft.Practices.Prism.Modularity;
 using Microsoft.Practices.Unity;
+
+using Microsoft.Practices.Prism.Modularity;
 using Microsoft.Practices.Prism.UnityExtensions;
+using Microsoft.Practices.Prism.Logging;
 
 using Bionte.Modules;
 
@@ -10,6 +12,12 @@ namespace YAPOS
 {
     class Bootstrapper : UnityBootstrapper
     {
+        private readonly LoggerFacade _logger = new LoggerFacade();
+
+        protected override ILoggerFacade CreateLogger()
+        {
+            return _logger;
+        }
         protected override DependencyObject CreateShell()
         {
             return this.Container.Resolve<Shell>();
