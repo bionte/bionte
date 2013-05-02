@@ -16,20 +16,19 @@ using System.Windows.Markup;
 
 namespace Bionte.Controls
 {
-    [ContentProperty("Content")]
-    public class ControlUserPassword : Control
+    [TemplatePart(Name="PART_Login", Type=typeof(ContentControl))]
+    //[ContentProperty("Content")]
+    public class ControlUserPassword : ContentControl
     {
+        
+        //public string Content
+        //{
+        //    get { return (string)GetValue(ContentProperty); }
+        //    set { SetValue(ContentProperty, value); }
+        //}
 
-
-        public string Content
-        {
-            get { return (string)GetValue(ContentProperty); }
-            set { SetValue(ContentProperty, value); }
-        }
-
-        public static readonly DependencyProperty ContentProperty =
-            DependencyProperty.Register("Content", typeof(string), typeof(ControlUserPassword));
-
+        //public static readonly DependencyProperty ContentProperty =
+        //    DependencyProperty.Register("Content", typeof(string), typeof(ControlUserPassword));
 
 
         public string UserName
@@ -41,109 +40,113 @@ namespace Bionte.Controls
         public static readonly DependencyProperty UserNameProperty =
             DependencyProperty.Register("UserName", typeof(string), typeof(ControlUserPassword));
 
-
-        //public string Password
-        //{
-        //    get { return (string)GetValue(PasswordProperty); }
-        //    set { SetValue(PasswordProperty, value); }
-        //}
-
-        //// Using a DependencyProperty as the backing store for Password.  This enables animation, styling, binding, etc...
-        //public static readonly DependencyProperty PasswordProperty =
-        //    DependencyProperty.Register("Password", typeof(string), typeof(ControlUserPassword));
-
-
-
         static ControlUserPassword()
         {
             DefaultStyleKeyProperty.OverrideMetadata(typeof(ControlUserPassword), new FrameworkPropertyMetadata(typeof(ControlUserPassword)));
         }
 
-
-
-        public static readonly DependencyProperty PasswordProperty =
-            DependencyProperty.RegisterAttached("Password",
-            typeof(string), typeof(ControlUserPassword),
-            new FrameworkPropertyMetadata(string.Empty, OnPasswordPropertyChanged));
-
-        public static readonly DependencyProperty AttachProperty =
-            DependencyProperty.RegisterAttached("Attach",
-            typeof(bool), typeof(ControlUserPassword), new PropertyMetadata(false, Attach));
-
-        private static readonly DependencyProperty IsUpdatingProperty =
-           DependencyProperty.RegisterAttached("IsUpdating", typeof(bool),
-           typeof(ControlUserPassword));
-
-
-        public static void SetAttach(DependencyObject dp, bool value)
+        public override void OnApplyTemplate()
         {
-            dp.SetValue(AttachProperty, value);
+            base.OnApplyTemplate();
+
+            ContentControl LoginFireControl = base.GetTemplateChild("PART_Login") as ContentControl;
+
+            LoginFireControl.PreviewMouseDown += LoginFireControl_PreviewMouseDown;
         }
 
-        public static bool GetAttach(DependencyObject dp)
+        void LoginFireControl_PreviewMouseDown(object sender, MouseButtonEventArgs e)
         {
-            return (bool)dp.GetValue(AttachProperty);
+            throw new NotImplementedException();
         }
 
-        public static string GetPassword(DependencyObject dp)
-        {
-            return (string)dp.GetValue(PasswordProperty);
-        }
 
-        public static void SetPassword(DependencyObject dp, string value)
-        {
-            dp.SetValue(PasswordProperty, value);
-        }
+        #region "Helper for password binding"
 
-        private static bool GetIsUpdating(DependencyObject dp)
-        {
-            return (bool)dp.GetValue(IsUpdatingProperty);
-        }
+            public static readonly DependencyProperty PasswordProperty =
+                DependencyProperty.RegisterAttached("Password",
+                typeof(string), typeof(ControlUserPassword),
+                new FrameworkPropertyMetadata(string.Empty, OnPasswordPropertyChanged));
 
-        private static void SetIsUpdating(DependencyObject dp, bool value)
-        {
-            dp.SetValue(IsUpdatingProperty, value);
-        }
+            public static readonly DependencyProperty AttachProperty =
+                DependencyProperty.RegisterAttached("Attach",
+                typeof(bool), typeof(ControlUserPassword), new PropertyMetadata(false, Attach));
 
-        private static void OnPasswordPropertyChanged(DependencyObject sender,
-            DependencyPropertyChangedEventArgs e)
-        {
-            PasswordBox passwordBox = sender as PasswordBox;
-            passwordBox.PasswordChanged -= PasswordChanged;
+            private static readonly DependencyProperty IsUpdatingProperty =
+               DependencyProperty.RegisterAttached("IsUpdating", typeof(bool),
+               typeof(ControlUserPassword));
 
-            if (!(bool)GetIsUpdating(passwordBox))
+
+            public static void SetAttach(DependencyObject dp, bool value)
             {
-                passwordBox.Password = (string)e.NewValue;
+                dp.SetValue(AttachProperty, value);
             }
-            passwordBox.PasswordChanged += PasswordChanged;
-        }
 
-        private static void Attach(DependencyObject sender,
-            DependencyPropertyChangedEventArgs e)
-        {
-            PasswordBox passwordBox = sender as PasswordBox;
-
-            if (passwordBox == null)
-                return;
-
-            if ((bool)e.OldValue)
+            public static bool GetAttach(DependencyObject dp)
             {
+                return (bool)dp.GetValue(AttachProperty);
+            }
+
+            public static string GetPassword(DependencyObject dp)
+            {
+                return (string)dp.GetValue(PasswordProperty);
+            }
+
+            public static void SetPassword(DependencyObject dp, string value)
+            {
+                dp.SetValue(PasswordProperty, value);
+            }
+
+            private static bool GetIsUpdating(DependencyObject dp)
+            {
+                return (bool)dp.GetValue(IsUpdatingProperty);
+            }
+
+            private static void SetIsUpdating(DependencyObject dp, bool value)
+            {
+                dp.SetValue(IsUpdatingProperty, value);
+            }
+
+            private static void OnPasswordPropertyChanged(DependencyObject sender,
+                DependencyPropertyChangedEventArgs e)
+            {
+                PasswordBox passwordBox = sender as PasswordBox;
                 passwordBox.PasswordChanged -= PasswordChanged;
-            }
 
-            if ((bool)e.NewValue)
-            {
+                if (!(bool)GetIsUpdating(passwordBox))
+                {
+                    passwordBox.Password = (string)e.NewValue;
+                }
                 passwordBox.PasswordChanged += PasswordChanged;
             }
-        }
 
-        private static void PasswordChanged(object sender, RoutedEventArgs e)
-        {
-            PasswordBox passwordBox = sender as PasswordBox;
-            SetIsUpdating(passwordBox, true);
-            SetPassword(passwordBox, passwordBox.Password);
-            SetIsUpdating(passwordBox, false);
-        }
+            private static void Attach(DependencyObject sender,
+                DependencyPropertyChangedEventArgs e)
+            {
+                PasswordBox passwordBox = sender as PasswordBox;
+
+                if (passwordBox == null)
+                    return;
+
+                if ((bool)e.OldValue)
+                {
+                    passwordBox.PasswordChanged -= PasswordChanged;
+                }
+
+                if ((bool)e.NewValue)
+                {
+                    passwordBox.PasswordChanged += PasswordChanged;
+                }
+            }
+
+            private static void PasswordChanged(object sender, RoutedEventArgs e)
+            {
+                PasswordBox passwordBox = sender as PasswordBox;
+                SetIsUpdating(passwordBox, true);
+                SetPassword(passwordBox, passwordBox.Password);
+                SetIsUpdating(passwordBox, false);
+            }
+
+        #endregion
 
     }
 }
