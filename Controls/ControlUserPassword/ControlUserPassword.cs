@@ -42,6 +42,7 @@ namespace Bionte.Controls
 
         static ControlUserPassword()
         {
+            
             DefaultStyleKeyProperty.OverrideMetadata(typeof(ControlUserPassword), new FrameworkPropertyMetadata(typeof(ControlUserPassword)));
         }
 
@@ -51,12 +52,13 @@ namespace Bionte.Controls
 
             ContentControl LoginFireControl = base.GetTemplateChild("PART_Login") as ContentControl;
 
-            LoginFireControl.PreviewMouseDown += LoginFireControl_PreviewMouseDown;
+            if (LoginFireControl != null)
+                LoginFireControl.PreviewMouseDown += new MouseButtonEventHandler(LoginFireControl_PreviewMouseDown);
         }
 
         void LoginFireControl_PreviewMouseDown(object sender, MouseButtonEventArgs e)
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
         }
 
 

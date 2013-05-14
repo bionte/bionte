@@ -6,7 +6,7 @@ using Microsoft.Practices.Prism.Modularity;
 using Microsoft.Practices.Prism.UnityExtensions;
 using Microsoft.Practices.Prism.Logging;
 
-using Bionte.Modules;
+//using Bionte.Modules;
 
 namespace YAPOS
 {

@@ -1,8 +1,12 @@
-﻿<UserControl x:Class="Bionte.Views.ViewHelloWorld"
+﻿<UserControl
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-    <Grid>
-        <TextBlock Text="Hello World" Foreground="Green" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Calibri" FontSize="24" FontWeight="Bold"></TextBlock>
-    </Grid>
-    
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:Controls="clr-namespace:Bionte.Controls;assembly=Bionte.Controls.ControlUserPassword" x:Class="Bionte.Views.ViewHelloWorld"
+             >
+    <StackPanel>
+        <TextBlock Text="Hello World" Foreground="Green" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Calibri" FontSize="24" FontWeight="Bold"/>
+
+        <Controls:ControlUserPassword Content="ControlUserPassword" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+
+    </StackPanel>
+
 </UserControl>
